@@ -1,33 +1,33 @@
 import { useState } from "react";
 import "./styles/App.css";
-import KanyeQuote from "./components/KanyeQuote";
+import ColorScheme from "./components/ColorScheme";
 
 const App = () => {
-  const [displayQuote, setDisplayQuote] = useState(false);
+  const [colorScheme, setColorScheme] = useState([]);
 
-  const toggleQuotes = () => {
-    if (displayQuote === false) {
-      setDisplayQuote(true);
-    } else {
-      setDisplayQuote(false);
-    }
-  };
 
   return (
     <div className="App">
-      <header className="kanye-header"></header>
+
+      <header className="main_header">
+      <h1>Get a random color scheme</h1>
+
+      <button>
+        Click here
+      </button>
+
+
+
+      </header>
+
       <main>
-        <div className="quote-container">
-          {/* conditional rendering; depending on if displayQuote true or false, something different is displayed */}
-          {displayQuote === false ? (
-            <h2>Need some inspiration? See what Kanye thinks.</h2>
-          ) : (
-            <KanyeQuote displayQuote={displayQuote} />
-          )}
-        </div>
-        <button onClick={toggleQuotes}>
-          {displayQuote === false ? "New Quote" : "Clear Quote"}
-        </button>
+
+            <div className="color_scheme_container">
+        
+            <ColorScheme />
+
+            </div>
+        
       </main>
     </div>
   );

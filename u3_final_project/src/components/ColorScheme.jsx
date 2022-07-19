@@ -4,38 +4,41 @@ import axios from 'axios'
 
 
 
-const KanyeQuote = ({ displayQuote }) => {
+const ColorScheme = ({ colorSchemeStatus }) => {
 
-  const [quote, setQuote] = useState('')
-
-  const getKanyeQuote = async () => {
+  const [colorScheme, setColorScheme] = useState([])
 
 
+  // generate color scheme from API request
+  const getColorScheme = async () => {
+    // axios post request
     const options = {
       url: 'http://colormind.io/api/',
       method: 'POST',
       data: JSON.stringify({ "model": "default" })
 
     };
-
     axios(options)
       .then(response => {
         console.log(response);
+
+        setColorScheme(response.data.result)
+
       });
 
   }
 
 
   useEffect(() => {
-    getKanyeQuote()
-  }, [displayQuote])
+    getColorScheme()
+  }, [colorSchemeStatus])
 
 
 
   return (
-    <h2 style={{ fontStyle: 'italic' }}>{quote !== '' && quote}</h2>
+    <h2>{colorScheme}</h2>
 
   )
 }
 
-export default KanyeQuote
+export default ColorScheme
