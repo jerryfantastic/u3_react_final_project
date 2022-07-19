@@ -8,7 +8,7 @@ import ColorSwatch from "./ColorSwatch";
 const ColorScheme = ({ colorSchemeStatus }) => {
 
   const [colorScheme, setColorScheme] = useState([
-    [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]
+
   ])
 
 
@@ -50,7 +50,7 @@ const ColorScheme = ({ colorSchemeStatus }) => {
   return (
     <div>
       {colorScheme.map((colorSwatch) => (
-        <ColorSwatch colorSwatch={colorSwatch} />
+        <ColorSwatch colorSwatch={colorSwatch} key={colorSwatch} />
 
 
       ))}
