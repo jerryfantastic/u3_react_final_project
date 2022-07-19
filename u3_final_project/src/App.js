@@ -19,7 +19,7 @@ const App = () => {
 
       <h3>Unit 3 Project</h3>
 
-      <h1>Generate a color palette</h1>
+      <h1>Color palette inspiration</h1>
 
 
 
@@ -31,7 +31,7 @@ const App = () => {
             <ColorScheme /></div>
 
             
-      <button className="generator_button" onClick={refreshPage}>Generate</button>
+      <button className="generator_button" onClick={refreshPage}>Refresh</button>
       </div>
     </div>
   );

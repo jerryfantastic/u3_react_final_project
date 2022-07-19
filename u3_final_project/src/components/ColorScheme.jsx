@@ -6,9 +6,7 @@ import ColorSwatch from "./ColorSwatch";
 
 
 const ColorScheme = ({ colorSchemeStatus }) => {
-
   const [colorScheme, setColorScheme] = useState([
-
   ])
 
 
