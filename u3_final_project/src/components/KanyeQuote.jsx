@@ -4,39 +4,38 @@ import axios from 'axios'
 
 
 
-const KanyeQuote = ({displayQuote}) => {
+const KanyeQuote = ({ displayQuote }) => {
 
-    const [quote, setQuote] = useState('')
+  const [quote, setQuote] = useState('')
 
-    const getKanyeQuote = async () => {
-    
-    
-       
-    
-        try {
-            const res = await axios.get(`https://api.kanye.rest`)
-            console.log(res)
-
-            setQuote(res.data.quote)
-    
-    
-        } catch(err) {
-          console.log(err)
-        }
-    
-      }
-    
-    
-    useEffect(() => {
-        getKanyeQuote()
-      }, [displayQuote])
+  const getKanyeQuote = async () => {
 
 
+    const options = {
+      url: 'http://colormind.io/api/',
+      method: 'POST',
+      data: JSON.stringify({ "model": "default" })
 
-    return (
-        <h2 style={{fontStyle: 'italic'}}>{quote !== '' && quote}</h2>
+    };
 
-    )
+    axios(options)
+      .then(response => {
+        console.log(response);
+      });
+
   }
-  
-  export default KanyeQuote
+
+
+  useEffect(() => {
+    getKanyeQuote()
+  }, [displayQuote])
+
+
+
+  return (
+    <h2 style={{ fontStyle: 'italic' }}>{quote !== '' && quote}</h2>
+
+  )
+}
+
+export default KanyeQuote
