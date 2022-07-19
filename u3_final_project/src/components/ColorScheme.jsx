@@ -12,13 +12,10 @@ const ColorScheme = ({ colorSchemeStatus }) => {
   ])
 
 
-  console.log(colorScheme[0])
-
   // generate color scheme from API request
   const getColorScheme = async () => {
 
     // axios post request
-
     try {
 
       const options = {
