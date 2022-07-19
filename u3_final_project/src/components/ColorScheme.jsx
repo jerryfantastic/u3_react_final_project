@@ -49,11 +49,13 @@ const ColorScheme = ({ colorSchemeStatus }) => {
 
   return (
     <div>
-      <ColorSwatch colorSwatch={colorScheme[0]} />
-      <ColorSwatch colorSwatch={colorScheme[1]} />
-      <ColorSwatch colorSwatch={colorScheme[2]} />
-      <ColorSwatch colorSwatch={colorScheme[3]} />
-      <ColorSwatch colorSwatch={colorScheme[4]} /></div>
+      {colorScheme.map((colorSwatch) => (
+        <ColorSwatch colorSwatch={colorSwatch} />
+
+
+      ))}
+
+    </div>
 
   )
 }

@@ -12,13 +12,21 @@ body {
 
 .wrapper {
   width: 1600px;
-  margin: 150px auto 0;
+  margin: 100px auto 0;
 }
 
 h1 {
-  font-weight: 400;
+  font-weight: 700;
   color: #efefef;
   margin: 0 0 50px 0;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  margin: 0 0 20px 0;
+  color: #ffffff;
 }
 
 .color_scheme_container {
@@ -47,7 +55,8 @@ button.generator_button {
   background: #dddddd;
   height: 50px;
   width: 150px;
-  margin: 50px 0 0 0;
+  font-weight: 500;
+  margin: 90px 0 0 0;
   font-family: 'Montserrat';
   font-size: 16px;
   transition: all 0.2s;

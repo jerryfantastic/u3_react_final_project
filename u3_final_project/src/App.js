@@ -16,7 +16,10 @@ const App = () => {
       <div className="wrapper">
 
       <header className="main_header">
-      <h1>Generate a color scheme</h1>
+
+      <h3>Unit 3 Project</h3>
+
+      <h1>Generate a color palette</h1>
 
 
 
