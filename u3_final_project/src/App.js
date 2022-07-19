@@ -1,13 +1,17 @@
 import { useState } from "react";
 import "./styles/App.css";
-import ColorScheme from "./components/ColorScheme";
+import ColorPalette from "./components/ColorPalette";
 
 
 const App = () => {
-  const [colorScheme, setColorScheme] = useState([]);
+  const [colorPaletteStatus, setcolorPaletteStatus] = useState(false);
 
-  const refreshPage = () => {
-    window.location.reload();
+  const refreshPalette = () => {
+    if (colorPaletteStatus === false) {
+      setcolorPaletteStatus(true);
+    } else {
+      setcolorPaletteStatus(false);
+    }
   };
 
 
@@ -19,7 +23,7 @@ const App = () => {
 
       <h3>Unit 3 Project</h3>
 
-      <h1>Color palette inspiration</h1>
+      <h1>Random color palette API</h1>
 
 
 
@@ -28,10 +32,10 @@ const App = () => {
       
             <div className="color_scheme_container">
         
-            <ColorScheme /></div>
+            <ColorPalette colorPaletteStatus={colorPaletteStatus} /></div>
 
             
-      <button className="generator_button" onClick={refreshPage}>Refresh</button>
+      <button className="generator_button" onClick={refreshPalette}>Refresh</button>
       </div>
     </div>
   );

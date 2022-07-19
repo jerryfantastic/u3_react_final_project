@@ -5,13 +5,13 @@ import ColorSwatch from "./ColorSwatch";
 
 
 
-const ColorScheme = ({ colorSchemeStatus }) => {
-  const [colorScheme, setColorScheme] = useState([
+const ColorPalette = ({ colorPaletteStatus }) => {
+  const [colorPalette, setColorPalette] = useState([
   ])
 
 
   // generate color scheme from API request
-  const getColorScheme = async () => {
+  const getColorPalette = async () => {
 
     // axios post request
     try {
@@ -26,7 +26,7 @@ const ColorScheme = ({ colorSchemeStatus }) => {
         .then(response => {
           console.log(response.data.result);
 
-          setColorScheme(response.data.result)
+          setColorPalette(response.data.result)
 
         });
     } catch (err) {
@@ -37,14 +37,14 @@ const ColorScheme = ({ colorSchemeStatus }) => {
 
 
   useEffect(() => {
-    getColorScheme()
-  }, [colorSchemeStatus])
+    getColorPalette()
+  }, [colorPaletteStatus])
 
 
 
   return (
     <div>
-      {colorScheme.map((colorSwatch) => (
+      {colorPalette.map((colorSwatch) => (
         <ColorSwatch colorSwatch={colorSwatch} key={colorSwatch} />
 
 
@@ -55,4 +55,4 @@ const ColorScheme = ({ colorSchemeStatus }) => {
   )
 }
 
-export default ColorScheme
+export default ColorPalette
