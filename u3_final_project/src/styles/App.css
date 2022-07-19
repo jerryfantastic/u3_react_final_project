@@ -29,6 +29,17 @@ h1 {
   width: calc(100% / 5);
   height: 320px;
   display: inline-block;
+  position: relative;
+}
+
+.color_scheme_container .color_swatch_hex {
+  position: absolute;
+  bottom: -30px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+
 }
 
 button.generator_button {
