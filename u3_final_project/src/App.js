@@ -6,6 +6,10 @@ import ColorScheme from "./components/ColorScheme";
 const App = () => {
   const [colorScheme, setColorScheme] = useState([]);
 
+  const refreshPage = () => {
+    window.location.reload();
+  };
+
 
   return (
     <div className="App">
@@ -21,12 +25,10 @@ const App = () => {
       
             <div className="color_scheme_container">
         
-            <ColorScheme />
-
-            </div>
+            <ColorScheme /></div>
 
             
-      <button className="generator_button" >Generate</button>
+      <button className="generator_button" onClick={refreshPage}>Generate</button>
       </div>
     </div>
   );
