@@ -121,7 +121,7 @@ button.generator_button {
   font-size: 16px;
   transition: all 0.2s;
   cursor: pointer;
-  animation: button-animate 4s ease-out;
+  animation: button-animate 3s ease-in;
 }
 
 @keyframes button-animate {
