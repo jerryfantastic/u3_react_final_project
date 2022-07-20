@@ -45,9 +45,7 @@ const ColorPalette = ({ colorPaletteStatus }) => {
   return (
     <div>
       {colorPalette.map((colorSwatch) => (
-        <ColorSwatch colorSwatch={colorSwatch} key={colorSwatch} />
-
-
+        <ColorSwatch colorSwatchRed={colorSwatch[0]} colorSwatchGreen={colorSwatch[1]} colorSwatchBlue={colorSwatch[2]} key={colorSwatch} />
       ))}
 
     </div>

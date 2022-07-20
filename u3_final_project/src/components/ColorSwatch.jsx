@@ -14,10 +14,10 @@ const ColorSwatch = (props) => {
 
     return (
         <div className="color_swatch" style={{
-            backgroundColor: `rgb(${props.colorSwatch[0]}, ${props.colorSwatch[1]},${props.colorSwatch[2]})`
+            backgroundColor: `rgb(${props.colorSwatchRed}, ${props.colorSwatchGreen},${props.colorSwatchBlue})`
         }}>
 
-            <span className="color_swatch_hex">{rgbToHex(props.colorSwatch[0], props.colorSwatch[1], props.colorSwatch[2])}</span>
+            <span className="color_swatch_hex">{rgbToHex(props.colorSwatchRed, props.colorSwatchGreen, props.colorSwatchBlue)}</span>
         </div>
     )
 }
