@@ -44,7 +44,7 @@ h3 {
 }
 
 .color_scheme_container .color_swatch:nth-child(1) {
-  animation: append-animate .5s ease-out;
+  animation: append-animate .8s ease-out;
 }
 
 .color_scheme_container .color_swatch:nth-child(2) {
@@ -89,7 +89,24 @@ h3 {
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
+  animation: color_swatch_hex-animate 2s ease-out;
+}
 
+
+
+
+@keyframes color_swatch_hex-animate {
+  from {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 button.generator_button {
